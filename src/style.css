@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* ******** RESET ******** */
 * {
     margin: 0;
@@ -55,3 +57,83 @@ svg {
 }
 
 /* ******** RESET ******** */
+/*  DEFINICION DE VARIABLES  */
+:root {
+    --color-background: #2D3250;
+    --color-background-cajas: #7077A1;
+    --color-buttons: #f6872c;
+    --color-fonts: #F6B17A;
+    --font-titulo: "Roboto", sans-serif;
+    --font-texto: "Open Sans", sans-serif;
+    --font-size: 1.5rem;
+}
+
+::placeholder {
+    color: var(--color-fonts);
+    opacity: 1;
+}
+
+/*  DEFINICION DE VARIABLES  */
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-fonts);
+    font-family: var(--font-titulo);
+    font-size: var(--font-size);
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em;
+}
+
+input,
+textarea {
+    background-color: var(--color-background-cajas);
+    height: 3em;
+    width: 60%;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--color-buttons);
+    margin: .8rem;
+    padding: .8rem;
+    border-radius: .5em;
+}
+
+#copy {
+    width: 7em;
+    align-self: center;
+}
+
+.logo-challenge {
+    width: 40%;
+}
