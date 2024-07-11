@@ -44,8 +44,9 @@ function encriptar(inputText) {
 document.getElementById("encript").addEventListener("click", () => {
   let inputText = document.getElementById("toEncript").value;
   let encriptado = validar(inputText);
-  if (!encriptado) {
-  }
+
   document.getElementById("encripted").innerHTML = encriptado;
-  document.getElementById("toEncript").value = "";
+  setTimeout(function () {
+    document.getElementById("toEncript").value = "";
+  }, 5000);
 });
