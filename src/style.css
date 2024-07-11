@@ -109,8 +109,8 @@ main {
 input,
 textarea {
     background-color: var(--color-background-cajas);
-    height: 3em;
-    width: 60%;
+    height: 8em;
+    width: 40%;
     padding: 1rem 1.5rem;
     margin: 2rem 0;
     box-sizing: border-box;
@@ -136,4 +136,32 @@ button {
 
 .logo-challenge {
     width: 40%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 2em;
+    }
+
+    .buttons {
+        display: block;
+        justify-content: center;
+    }
+
+    .resizable-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+        overflow: hidden;
+        word-wrap: break-word;
+        resize: none;
+        /* Prevents manual resizing */
+    }
 }
