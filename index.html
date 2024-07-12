@@ -16,13 +16,20 @@
     </header>
     <main>
         <div class="container">
-            <input type="text" name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..." autofocus>
+            <div id="notification">**</div>
+            <textarea name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."></textarea>
+            <!-- <input type="text" name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."> -->
+
             <div class="buttons">
                 <button id="encript">Encriptar</button>
                 <button id="decript">Desencriptar</button>
             </div>
             <textarea name="encripted" id="encripted"></textarea>
-            <button name="copy" id="copy">Copiar</button>
+            <div class="buttons">
+                <button name="copy" id="copy">Copiar</button>
+                <button name="delete" id="delete">Borrar</button>
+            </div>
+
         </div>
     </main>
     <footer>

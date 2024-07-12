@@ -129,7 +129,6 @@ main {
     height: 70vh;
 }
 
-input,
 textarea {
     background-color: var(--color-background-cajas);
     border-radius: .9em;
@@ -137,7 +136,6 @@ textarea {
     width: 40%;
     padding: 1.5em;
     color: black;
-
 }
 
 .buttons {
@@ -170,6 +168,22 @@ button:hover {
 .logo-alura-oracle {
     width: 20%;
 }
+
+#notification {
+    visibility: hidden;
+    background-color: var(--color-buttons);
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+}
+
 
 @media only screen and (min-width: 768px) {
 
