@@ -2,13 +2,13 @@
 
 /* DEFINICION DE VARIABLES */
 :root {
-    --color-background: #474f7d;
+    --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
     --color-background-cajas: #7b83aecd;
-    --color-background-footer: #ea852cc5;
-    --color-background-header: rgba(117, 124, 164, 0.5);
-    --color-buttons: #f9b779a9;
-    --color-buttons-hover: #f97306;
-    --color-fonts: #F6B17A;
+    --color-background-footer: #061a32;
+    --color-background-header: #083367b1;
+    --color-buttons: #a6fec1;
+    --color-buttons-hover: #8cfaad;
+    --color-fonts: #fdfdfd;
     --font-titulo: "Ubuntu", sans-serif;
     --font-texto: "Open Sans", sans-serif;
     --font-size: .8rem;
@@ -22,7 +22,7 @@
 /* DEFINICION DE VARIABLES */
 
 body {
-    background-color: var(--color-background);
+    background: var(--color-background);
     color: var(--color-fonts);
     font-size: var(--font-size);
 }
@@ -95,10 +95,9 @@ button {
     background-color: var(--color-buttons);
     margin: .8rem;
     padding: .8rem;
-    border-radius: .5em;
+    border-radius: 1.2em;
     text-align: center;
     width: 8em;
-
 }
 
 button:hover {
@@ -144,7 +143,7 @@ button:hover {
         display: flex;
         flex-direction: row;
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
