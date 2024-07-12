@@ -6,16 +6,16 @@
     --color-background-cajas: #7b83aecd;
     --color-background-footer: #ea852cc5;
     --color-background-header: rgba(117, 124, 164, 0.5);
-    --color-buttons: #f6872c;
+    --color-buttons: #f9b779a9;
     --color-buttons-hover: #f97306;
     --color-fonts: #F6B17A;
     --font-titulo: "Ubuntu", sans-serif;
     --font-texto: "Open Sans", sans-serif;
-    --font-size: 1.5rem;
+    --font-size: .8rem;
 }
 
 ::placeholder {
-    color: var(--color-fonts);
+    color: var(--color-background-header);
     opacity: 1;
 }
 
@@ -30,11 +30,13 @@ body {
 header,
 footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-weight: 600;
+    padding-left: .9em;
+    padding-right: .9em;
     width: 100%;
-    height: 13vh;
+    height: auto;
     box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
 }
 
@@ -73,7 +75,7 @@ main {
 }
 
 textarea {
-    background-color: var(--color-background-cajas);
+    background-color: rgba(214, 225, 247, 0.819);
     border-radius: .9em;
     height: 20em;
     width: 40%;
@@ -85,6 +87,8 @@ textarea {
     display: flex;
     justify-content: center;
     font-family: var(--font-texto);
+    font-weight: 600;
+
 }
 
 button {
@@ -92,16 +96,14 @@ button {
     margin: .8rem;
     padding: .8rem;
     border-radius: .5em;
+    text-align: center;
+    width: 8em;
+
 }
 
 button:hover {
     background-color: var(--color-buttons-hover);
-    padding: 0.9em;
-}
-
-#copy {
-    width: 7em;
-    align-self: center;
+    padding: 0.5em;
 }
 
 .logo-challenge {
@@ -117,8 +119,8 @@ button:hover {
     background-color: var(--color-buttons);
     color: white;
     text-align: center;
-    border-radius: 2px;
-    padding: 10px;
+    border-radius: .5em;
+    padding: .8em;
     position: fixed;
     z-index: 1;
     bottom: 80%;
@@ -129,6 +131,14 @@ button:hover {
 
 
 @media only screen and (min-width: 768px) {
+    body {
+        font-size: 1.3em;
+    }
+
+    header,
+    footer {
+        justify-content: space-evenly;
+    }
 
     .container {
         display: flex;
@@ -143,4 +153,18 @@ button:hover {
         justify-content: center;
     }
 
+    #notification {
+        visibility: hidden;
+        background-color: var(--color-buttons);
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        padding: 10px;
+        position: fixed;
+        z-index: 1;
+        bottom: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 200px;
+    }
 }
