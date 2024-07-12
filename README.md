@@ -31,15 +31,15 @@ encriptador_alura_ONE
 > [!TIP]
 >
 > Acepta mayúsculas y minúsculas  
->  No acepta simbolos o números  
->  No acepta caracteres especiales  
->  Acepta espacios en blanco
+> No acepta simbolos o números  
+> No acepta caracteres especiales  
+> Acepta espacios en blanco
 
 ## Construido Con :hammer_and_wrench:
 
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=html,css,js&theme=dark" />
   </a>
 </p>
 
