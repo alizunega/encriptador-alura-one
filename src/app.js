@@ -67,6 +67,10 @@ function desencriptar(inputText) {
     }
   }
   desencript = arrayString.join(" ");
+  if (desencript === inputText) {
+    mostrarNotificacion("El texto no fue encriptado");
+    return "";
+  }
   return desencript;
 }
 
@@ -75,9 +79,6 @@ document.getElementById("decript").addEventListener("click", () => {
 
   if (validar(inputText)) {
     let desencriptado = desencriptar(inputText);
-    if ((desencriptado = null)) {
-      mostrarNotificacion("El texto no fue encriptado");
-    }
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = desencriptado;
     setTimeout(function () {
