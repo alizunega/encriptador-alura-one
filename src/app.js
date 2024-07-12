@@ -75,6 +75,9 @@ document.getElementById("decript").addEventListener("click", () => {
 
   if (validar(inputText)) {
     let desencriptado = desencriptar(inputText);
+    if ((desencriptado = null)) {
+      mostrarNotificacion("El texto no fue encriptado");
+    }
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = desencriptado;
     setTimeout(function () {
@@ -91,7 +94,6 @@ document.getElementById("copy").addEventListener("click", () => {
     textarea.select();
     navigator.clipboard.writeText(textarea.value);
     mostrarNotificacion("Texto copiado a portapapeles");
-    textarea.setAttribute("readonly", true);
   } else {
     mostrarNotificacion("No hay texto para copiar");
   }
@@ -103,7 +105,6 @@ document.getElementById("delete").addEventListener("click", () => {
   let textarea = document.getElementById("encripted");
   textarea.value = "";
   mostrarNotificacion("Texto borrado");
-  textarea.setAttribute("readonly", false);
   //borro todo, muestro mensaje y recargo pagina
   setTimeout(() => {
     location.reload();
