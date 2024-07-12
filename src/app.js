@@ -58,14 +58,23 @@ document.getElementById("encript").addEventListener("click", () => {
 function desencriptar(inputText) {
   const cadenas = ["ai", "enter", "imes", "ober", "ufat"];
   let desencript = "";
+  let arrayString = inputText.split(" ");
+  for (let cadena of cadenas) {
+    for (let i = 0; i < arrayString.length; i++) {
+      if (arrayString[i].includes(cadena)) {
+        arrayString[i] = arrayString[i].replaceAll(cadena, cadena[0]);
+      }
+    }
+  }
+  desencript = arrayString.join(" ");
+  return desencript;
 }
 
 document.getElementById("decript").addEventListener("click", () => {
-  let inputText = document.getElementById("toDecript").value;
+  let inputText = document.getElementById("toEncript").value;
 
   if (validar(inputText)) {
     let desencriptado = desencriptar(inputText);
-
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = desencriptado;
     setTimeout(function () {
@@ -88,12 +97,17 @@ document.getElementById("copy").addEventListener("click", () => {
   }
 });
 /* COPIAR */
+
 /* BORRAR */
 document.getElementById("delete").addEventListener("click", () => {
   let textarea = document.getElementById("encripted");
   textarea.value = "";
+  mostrarNotificacion("Texto borrado");
   textarea.setAttribute("readonly", false);
-  location.reload();
+  //borro todo, muestro mensaje y recargo pagina
+  setTimeout(() => {
+    location.reload();
+  }, 3000);
 });
 /* BORRAR */
 
