@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/alura.ico">
+    <link rel="stylesheet" href="./src/reset.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo-challenge" src="./assets/alura-cha-remove.png" alt="">
+        <h1>Encriptador de texto</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div id="notification">**</div>
+            <textarea name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."></textarea>
+            <!-- <input type="text" name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."> -->
+
+            <div class="buttons">
+                <button id="encript">Encriptar</button>
+                <button id="decript">Desencriptar</button>
+            </div>
+            <textarea name="encripted" id="encripted"></textarea>
+            <div class="buttons">
+                <button name="copy" id="copy">Copiar</button>
+                <button name="delete" id="delete">Borrar</button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <img class="logo-alura-oracle" src="./assets/oracle_alura_blanco.png" alt="Logo ORACLE mas Alura">
+        <p>Desarrollado por Ali &copy;2024</p>
+    </footer>
+
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
