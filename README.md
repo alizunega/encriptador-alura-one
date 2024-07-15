@@ -6,6 +6,23 @@ Challenge Encriptador para curso Alura ONE
 
 Proyecto: Challenge Encriptador de texto para curso Alura ONE
 
+## Requerimientos del proyecto
+```
+Las "llaves" de encriptación que utilizaremos son las siguientes:
+
+La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+
+Requisitos:
+
+> Debe funcionar solo con letras minúsculas
+> No deben ser utilizados letras con acentos ni caracteres especiales
+> Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+```
+
 ## Estructura de carpetas :open_file_folder:
 
 ```
@@ -14,8 +31,8 @@ encriptador_alura_ONE
 |   ├── style.css
 │   └── app.js
 ├── assets
-│   ├── imagenes.img
-│   └── logo_alura.img
+│   ├── iconos_redes
+│   └── iconos_alura
 |
 ├── index.html
 ├── LICENSE
