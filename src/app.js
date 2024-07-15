@@ -45,6 +45,9 @@ document.getElementById("encript").addEventListener("click", () => {
   let inputText = document.getElementById("toEncript").value;
   if (validar(inputText)) {
     let encriptado = encriptar(inputText);
+    if (encriptado === "") {
+      return mostrarNotificacion("No se puede encriptar un texto vacio");
+    }
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = encriptado;
     setTimeout(function () {
@@ -68,7 +71,7 @@ function desencriptar(inputText) {
   }
   desencript = arrayString.join(" ");
   if (desencript === inputText) {
-    mostrarNotificacion("El texto no fue encriptado");
+    mostrarNotificacion("El texto no fue encriptado!");
     return "";
   }
   return desencript;
@@ -105,6 +108,8 @@ document.getElementById("copy").addEventListener("click", () => {
 document.getElementById("delete").addEventListener("click", () => {
   let textarea = document.getElementById("encripted");
   textarea.value = "";
+  let textarea2 = document.getElementById("toEncript");
+  textarea2.value = "";
   mostrarNotificacion("Texto borrado");
   //borro todo, muestro mensaje y recargo pagina
   setTimeout(() => {

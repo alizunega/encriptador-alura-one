@@ -4,8 +4,8 @@
 :root {
     --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
     --color-background-cajas: #7b83aecd;
-    --color-background-footer: #061a32;
-    --color-background-header: #083367b1;
+    --color-background-footer: #142336;
+    --color-background-header: #193a62d8;
     --color-buttons: #a6fec1;
     --color-buttons-hover: #8cfaad;
     --color-fonts: #fdfdfd;
@@ -19,13 +19,23 @@
     opacity: 1;
 }
 
+
 /* DEFINICION DE VARIABLES */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background: var(--color-background);
     color: var(--color-fonts);
     font-size: var(--font-size);
-    font-family: var(--font-titulo)
+    font-family: var(--font-titulo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header,
@@ -51,7 +61,7 @@ header {
 }
 
 footer {
-    justify-content: space-evenly;
+    justify-content: space-between;
     bottom: 0;
     position: fixed;
     background-color: var(--color-background-footer);
@@ -74,10 +84,17 @@ main {
     font-family: var(--font-titulo);
     margin: 15vh 2em;
     height: 70vh;
+    flex: 1;
+    padding-top: calc(var(--header-height) + 1rem);
+    padding-bottom: calc(var(--footer-height) + 1rem);
+}
+
+p {
+    font-size: .8em;
 }
 
 textarea {
-    background-color: rgba(214, 225, 247, 0.819);
+    background-color: rgba(224, 231, 246, 0.819);
     border-radius: .9em;
     height: 20em;
     width: 100%;
@@ -100,7 +117,8 @@ button {
     padding: .8rem;
     border-radius: 1.2em;
     text-align: center;
-    width: 8em;
+    width: 9em;
+    color: black;
 }
 
 button:hover {
@@ -113,7 +131,7 @@ button:hover {
 }
 
 .logo-alura-oracle {
-    width: 20%;
+    width: 40%;
 }
 
 #notification {
@@ -131,8 +149,56 @@ button:hover {
     min-width: 200px;
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .5em;
+}
 
-@media only screen and (min-width: 768px) {
+.icono {
+    width: 50px;
+    margin: .5em;
+}
+
+.icono:hover {
+    cursor: pointer;
+    background-color: #0c2c51;
+    border-radius: 50%;
+}
+
+/* Dispositivos tabletas */
+@media (min-width: 601px) {
+    body {
+        font-size: 1em;
+    }
+
+    button {
+        margin: .5rem;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    header,
+    footer {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        padding-left: .9em;
+        padding-right: .9em;
+        width: 100%;
+        height: max-content;
+        box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
+    }
+
+    .logo-alura-oracle {
+        width: 35%;
+    }
+
+}
+
+/* Dispositivos de escritorio */
+@media (min-width: 901px) {
     body {
         font-size: 1.3em;
     }
@@ -155,6 +221,10 @@ button:hover {
         justify-content: center;
     }
 
+    .logo-alura-oracle {
+        width: 30%;
+    }
+
     #notification {
         visibility: hidden;
         background-color: var(--color-buttons);
@@ -168,5 +238,14 @@ button:hover {
         left: 50%;
         transform: translateX(-50%);
         min-width: 200px;
+    }
+
+    .icono {
+        width: 80px;
+        margin: .5em;
+    }
+
+    p {
+        font-size: 1em;
     }
 }
