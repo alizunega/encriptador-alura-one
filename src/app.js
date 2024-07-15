@@ -50,9 +50,6 @@ document.getElementById("encript").addEventListener("click", () => {
     }
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = encriptado;
-    setTimeout(function () {
-      document.getElementById("toEncript").value = "";
-    }, 5000);
   }
 });
 /* ENCRIPTAR */
@@ -84,9 +81,6 @@ document.getElementById("decript").addEventListener("click", () => {
     let desencriptado = desencriptar(inputText);
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
     document.getElementById("encripted").innerHTML = desencriptado;
-    setTimeout(function () {
-      document.getElementById("toEncript").value = "";
-    }, 5000);
   }
 });
 
