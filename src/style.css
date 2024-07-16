@@ -45,8 +45,8 @@ footer {
     font-weight: 600;
     padding-left: .9em;
     padding-right: .9em;
-    width: 100%;
     box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
+    width: 100%;
 }
 
 header {
@@ -73,7 +73,7 @@ footer {
     width: 80%;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: .6rem;
 }
 
 main {
@@ -81,11 +81,10 @@ main {
     justify-content: center;
     text-align: left;
     font-family: var(--font-titulo);
-    margin: 15vh 2em;
-    height: 70vh;
+    margin: 2vh 2em;
     flex: 1;
-    padding-top: calc(var(--header-height) + 1rem);
-    padding-bottom: calc(var(--footer-height) + 1rem);
+    padding-top: calc(var(--header-height));
+    padding-bottom: calc(var(--footer-height));
 }
 
 p {
@@ -95,9 +94,9 @@ p {
 textarea {
     background-color: rgba(224, 231, 246, 0.819);
     border-radius: .9em;
-    height: 20em;
+    height: 17em;
     width: 100%;
-    padding: 1.5em;
+    padding: .9em;
     color: black;
     resize: none;
 }
@@ -142,7 +141,7 @@ button:hover {
     padding: .8em;
     position: fixed;
     z-index: 1;
-    bottom: 85%;
+    bottom: 88%;
     left: 50%;
     transform: translateX(-50%);
     min-width: 200px;
@@ -172,6 +171,30 @@ ul {
         font-size: 1em;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-top: .5rem;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        font-family: var(--font-titulo);
+        margin: 1vh 2em;
+        flex: 1;
+        padding-top: calc(var(--header-height));
+        padding-bottom: calc(var(--footer-height));
+    }
+
+    textarea {
+        height: 13em;
+    }
+
     button {
         margin: .5rem;
         padding: .5rem;
@@ -186,12 +209,11 @@ ul {
         padding-left: .9em;
         padding-right: .9em;
         width: 100%;
-        height: max-content;
         box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
     }
 
     .logo-alura-oracle {
-        width: 35%;
+        width: 30%;
     }
 
     #notification {
@@ -209,6 +231,10 @@ ul {
         min-width: 200px;
     }
 
+    .icono {
+        width: 30px;
+        margin: .5em;
+    }
 }
 
 @media (min-width: 600px) and (orientation: landscape) {
@@ -217,7 +243,7 @@ ul {
     }
 
     .icono {
-        width: 40px;
+        width: 26px;
         margin: .3em;
     }
 
@@ -226,7 +252,7 @@ ul {
     }
 
     .logo-alura-oracle {
-        width: 25%;
+        width: 20%;
     }
 
     #notification {
@@ -249,7 +275,7 @@ ul {
 /* Dispositivos de escritorio */
 @media (min-width: 901px) {
     body {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     header,
@@ -271,7 +297,7 @@ ul {
     }
 
     .logo-alura-oracle {
-        width: 30%;
+        width: 28%;
     }
 
     #notification {
@@ -290,7 +316,7 @@ ul {
     }
 
     .icono {
-        width: 80px;
+        width: 50px;
         margin: .5em;
     }
 
