@@ -4,55 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/alura.ico">
+    <link rel="shortcut icon" href="./assets/img_alura/alura.ico">
     <link rel="stylesheet" href="./src/reset.css">
     <link rel="stylesheet" href="./src/style.css">
-    <title>Encriptador de Texto</title>
+    <title>Encriptador de texto</title>
 </head>
 
 <body>
-    <header>
-        <!-- <img class="logo-challenge" src="./assets/alura-cha-remove.png" alt=""> -->
-        <h1>Encriptador de texto</h1>
-    </header>
-
-    <main>
-        <div class="container">
+    <div class="container">
+        <header>
+            <h1>Encriptador de texto</h1>
+        </header>
+        <main>
             <div id="notification">**</div>
-            <textarea name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."></textarea>
-            <!-- <input type="text" name="toEncript" id="toEncript" placeholder="Ingrese el texto a encriptar..."> -->
-
-            <div class="buttons">
+            <section class="section1"><textarea name="toEncript" id="toEncript"
+                    placeholder="Ingrese el texto a encriptar..."></textarea></section>
+            <section class="section2 buttons">
                 <button id="encript">Encriptar</button>
                 <button id="decript">Desencriptar</button>
-            </div>
-            <textarea name="encripted" id="encripted" readonly></textarea>
-            <div class="buttons">
+            </section>
+            <section class="section3"><textarea name="encripted" id="encripted" readonly></textarea></section>
+            <section class="section4 buttons">
                 <button name="copy" id="copy">Copiar</button>
                 <button name="delete" id="delete">Borrar</button>
-            </div>
+            </section>
+        </main>
+        <footer>
+            <img class="logo-alura-oracle" src="./assets/img_alura/oracle_alura_blanco.png" alt="Logo ORACLE mas Alura">
+            <p>Desarrollado por Alicia Zuñega &copy;2024</p>
 
-        </div>
-    </main>
-    <footer>
-        <img class="logo-alura-oracle" src="./assets/img_alura/oracle_alura_blanco.png" alt="Logo ORACLE mas Alura">
-        <p>Desarrollado por Alicia Zuñega &copy;2024</p>
-
-        <ul>
-            <li>
-                <a href="https://github.com/alizunega" target="_blank">
-                    <img class="icono" src="./assets/iconos_redes/icono_github.png" alt="Icono Redes GitHub">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/alicialzunegamza" target="_blank">
-                    <img class="icono" src="./assets/iconos_redes/icons8-linkedin-90.png" alt="Icono Redes LinkedIn">
-                </a>
-            </li>
-        </ul>
-
-    </footer>
-
+            <ul>
+                <li>
+                    <a href="https://github.com/alizunega" target="_blank">
+                        <img class="icono" src="./assets/iconos_redes/icono_github.png" alt="Icono Redes GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/alicialzunegamza" target="_blank">
+                        <img class="icono" src="./assets/iconos_redes/icons8-linkedin-90.png"
+                            alt="Icono Redes LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
     <script src="./src/app.js"></script>
 </body>
 

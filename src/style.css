@@ -19,7 +19,6 @@
     opacity: 1;
 }
 
-
 /* DEFINICION DE VARIABLES */
 html,
 body {
@@ -38,75 +37,34 @@ body {
     flex-direction: column;
 }
 
-header,
-footer {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    padding-left: .9em;
-    padding-right: .9em;
-    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
-    width: 100%;
-}
-
-header {
-    justify-content: center;
-    top: 0;
-    position: fixed;
-    padding-top: .5em;
-    padding-bottom: .8em;
-    background-color: var(--color-background-header);
+#notification {
+    visibility: hidden;
+    background-color: var(--color-buttons);
+    color: rgb(0, 0, 0);
     text-align: center;
-}
-
-footer {
-    justify-content: space-between;
-    bottom: 0;
+    border-radius: .5em;
+    padding: .8em;
     position: fixed;
-    background-color: var(--color-background-footer);
-    color: var(--color-background);
+    z-index: 1;
+    bottom: 89%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
 }
 
-.container {
+ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin-top: .6rem;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    font-family: var(--font-titulo);
-    margin: 2vh 2em;
-    flex: 1;
-    padding-top: calc(var(--header-height));
-    padding-bottom: calc(var(--footer-height));
-}
-
-p {
-    font-size: .8em;
-}
-
-textarea {
-    background-color: rgba(224, 231, 246, 0.819);
-    border-radius: .9em;
-    height: 17em;
-    width: 100%;
-    padding: .9em;
-    color: black;
-    resize: none;
+    justify-content: space-between;
+    padding: 0 .5em;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
     font-family: var(--font-texto);
     font-weight: 600;
-
 }
 
 button {
@@ -121,37 +79,21 @@ button {
 
 button:hover {
     background-color: var(--color-buttons-hover);
-    padding: 0.5em;
+    padding: .9em;
 }
 
-.logo-challenge {
-    width: 20%;
+textarea {
+    background-color: rgba(224, 231, 246, 0.819);
+    border-radius: .9em;
+    height: 17em;
+    width: 100%;
+    padding: .9em;
+    color: black;
+    resize: none;
 }
 
-.logo-alura-oracle {
+img {
     width: 40%;
-}
-
-#notification {
-    visibility: hidden;
-    background-color: var(--color-buttons);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: .5em;
-    padding: .8em;
-    position: fixed;
-    z-index: 1;
-    bottom: 88%;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 200px;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 .5em;
 }
 
 .icono {
@@ -165,145 +107,104 @@ ul {
     border-radius: 50%;
 }
 
-/* Dispositivos tabletas */
-@media (min-width: 600px) {
+.container {
+    display: grid;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    height: 100vh;
+    font-family: var(--font-titulo);
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
+    background-color: var(--color-background-header);
+    font-weight: 600;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5em;
+    padding: .6em;
+    margin: 2vh 2em;
+    flex: 1;
+    padding-top: calc(var(--header-height));
+    padding-bottom: calc(var(--footer-height));
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
+    font-weight: 600;
+    background-color: var(--color-background-footer);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
     body {
         font-size: 1em;
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-        margin-top: .5rem;
-    }
-
     main {
-        display: flex;
-        justify-content: center;
-        text-align: left;
-        font-family: var(--font-titulo);
-        margin: 1vh 2em;
-        flex: 1;
-        padding-top: calc(var(--header-height));
-        padding-bottom: calc(var(--footer-height));
-    }
-
-    textarea {
-        height: 13em;
-    }
-
-    button {
-        margin: .5rem;
-        padding: .5rem;
-        border-radius: .5rem;
-    }
-
-    header,
-    footer {
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-        padding-left: .9em;
-        padding-right: .9em;
-        width: 100%;
-        box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
-    }
-
-    .logo-alura-oracle {
-        width: 30%;
-    }
-
-    #notification {
-        visibility: hidden;
-        background-color: var(--color-buttons);
-        color: black;
-        text-align: center;
-        border-radius: .5em;
-        padding: .5em;
-        position: fixed;
-        z-index: 1;
-        bottom: 85%;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 200px;
-    }
-
-    .icono {
-        width: 30px;
-        margin: .5em;
-    }
-}
-
-@media (min-width: 600px) and (orientation: landscape) {
-    body {
-        font-size: .8em;
-    }
-
-    .icono {
-        width: 26px;
-        margin: .3em;
-    }
-
-    p {
-        font-size: .9em;
-    }
-
-    .logo-alura-oracle {
-        width: 20%;
-    }
-
-    #notification {
-        visibility: hidden;
-        background-color: var(--color-buttons);
-        color: black;
-        text-align: center;
-        border-radius: .5em;
-        padding: .3em;
-        position: fixed;
-        z-index: 1;
-        bottom: 82%;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 100px;
-    }
-
-}
-
-/* Dispositivos de escritorio */
-@media (min-width: 901px) {
-    body {
-        font-size: 1.2em;
-    }
-
-    header,
-    footer {
-        justify-content: space-evenly;
+        grid-template-columns: 2fr 1fr;
     }
 
     .container {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-rows: 15% auto 15%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        height: 100vh;
+
     }
 
     .buttons {
-        display: block;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
     }
 
-    .logo-alura-oracle {
-        width: 28%;
+    button {
+        margin: .6em .2em;
+        padding: .6;
+    }
+
+    textarea {
+        height: 12em;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    .icono {
+        width: 60px;
     }
 
     #notification {
         visibility: hidden;
         background-color: var(--color-buttons);
-        color: black;
+        color: rgb(0, 0, 0);
         text-align: center;
         border-radius: .5em;
         padding: .8em;
@@ -314,13 +215,38 @@ ul {
         transform: translateX(-50%);
         min-width: 200px;
     }
+}
 
-    .icono {
-        width: 50px;
-        margin: .5em;
+@media (min-width: 968px) {
+    body {
+        font-size: 1.3em;
     }
 
-    p {
-        font-size: 1em;
+    main {
+        grid-template-columns: 2fr 1fr 2fr 1fr;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    img {
+        width: 20%;
+    }
+
+    #notification {
+        visibility: hidden;
+        background-color: var(--color-buttons);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        border-radius: .5em;
+        padding: .8em;
+        position: fixed;
+        z-index: 1;
+        bottom: 78%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 200px;
     }
 }
