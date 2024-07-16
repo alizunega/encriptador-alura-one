@@ -46,7 +46,6 @@ footer {
     padding-left: .9em;
     padding-right: .9em;
     width: 100%;
-    height: auto;
     box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
 }
 
@@ -168,7 +167,7 @@ ul {
 }
 
 /* Dispositivos tabletas */
-@media (min-width: 601px) {
+@media (min-width: 600px) {
     body {
         font-size: 1em;
     }
@@ -193,6 +192,56 @@ ul {
 
     .logo-alura-oracle {
         width: 35%;
+    }
+
+    #notification {
+        visibility: hidden;
+        background-color: var(--color-buttons);
+        color: black;
+        text-align: center;
+        border-radius: .5em;
+        padding: .5em;
+        position: fixed;
+        z-index: 1;
+        bottom: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 200px;
+    }
+
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+    body {
+        font-size: .8em;
+    }
+
+    .icono {
+        width: 40px;
+        margin: .3em;
+    }
+
+    p {
+        font-size: .9em;
+    }
+
+    .logo-alura-oracle {
+        width: 25%;
+    }
+
+    #notification {
+        visibility: hidden;
+        background-color: var(--color-buttons);
+        color: black;
+        text-align: center;
+        border-radius: .5em;
+        padding: .3em;
+        position: fixed;
+        z-index: 1;
+        bottom: 82%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 100px;
     }
 
 }
