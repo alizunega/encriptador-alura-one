@@ -33,6 +33,7 @@ body {
     font-size: var(--font-size);
     font-family: var(--font-titulo);
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -42,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
+    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.573);
     background-color: var(--color-background-header);
     font-weight: 600;
 }
@@ -54,8 +55,8 @@ header {
         "header"
         "main"
         "footer";
-    height: 100vh;
     font-family: var(--font-titulo);
+    height: 100%;
 }
 
 
@@ -76,13 +77,13 @@ section {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1rem;
+
 }
 
 textarea {
     background-color: rgba(224, 231, 246, 0.819);
     border-radius: .7em;
-    height: 12em;
+    height: 65%;
     width: 100%;
     padding: .7em;
     color: black;
@@ -103,7 +104,6 @@ textarea {
     transform: translateX(-50%);
     min-width: 150px;
 }
-
 
 
 .buttons {
@@ -131,12 +131,8 @@ button:hover {
 
 
 
-img {
-    width: 40%;
-}
-
 .icono {
-    width: 50px;
+    width: 30px;
     margin: .5em;
 }
 
@@ -146,22 +142,53 @@ img {
     border-radius: 50%;
 }
 
-
 footer {
-    grid-area: footer;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.715);
-    font-weight: 600;
+    justify-content: space-evenly;
+    padding: 1.5em;
+    color: white;
     background-color: var(--color-background-footer);
+    box-shadow: .05em .05em .3em rgba(0, 0, 0, 0.573);
 }
 
-ul {
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-alura-oracle {
+    width: 200px;
+    height: auto;
+    margin-bottom: .8em;
+}
+
+footer p {
+    margin: .8em 0;
+    font-size: .5em;
+}
+
+footer ul {
     list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    padding: 0 .5em;
+    gap: 1em;
+}
+
+footer ul li {
+    display: inline;
+}
+
+.icono {
+    width: 60px;
+}
+
+/* Eliminar cualquier margen o padding del <a> */
+footer a {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -202,12 +229,15 @@ ul {
         height: 12em;
     }
 
-    ul {
-        display: flex;
+    .logo-alura-oracle {
+        width: 200px;
+        height: auto;
+        margin-bottom: .8em;
     }
 
-    .icono {
-        width: 60px;
+    footer p {
+        margin: .5em 0;
+        font-size: 1em;
     }
 
     #notification {
@@ -235,14 +265,6 @@ ul {
         grid-template-columns: 2fr 1fr 2fr 1fr;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    img {
-        width: 20%;
-    }
 
     #notification {
         visibility: hidden;
@@ -261,5 +283,16 @@ ul {
 
     textarea {
         height: 20em;
+    }
+
+    .logo-alura-oracle {
+        width: 300px;
+        height: auto;
+        margin-bottom: .8em;
+    }
+
+    footer p {
+        margin: .8em 0;
+        font-size: 1.2em;
     }
 }
