@@ -48,7 +48,7 @@ encriptador_alura_ONE
 
 > [!TIP]
 >
-> Acepta mayúsculas y minúsculas  
+> Acepta sólo minúsculas  
 > No acepta simbolos o números  
 > No acepta caracteres especiales  
 > Acepta espacios en blanco
