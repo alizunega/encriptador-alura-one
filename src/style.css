@@ -4,7 +4,7 @@
 :root {
     --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
     --color-background-cajas: #7b83aecd;
-    --color-background-footer: #142336;
+    --color-background-footer: #203754;
     --color-background-header: #193a62d8;
     --color-buttons: #a6fec1;
     --color-buttons-hover: #8cfaad;
@@ -15,7 +15,7 @@
 }
 
 ::placeholder {
-    color: var(--color-background-header);
+    color: white;
     opacity: 1;
 }
 
@@ -81,12 +81,12 @@ section {
 }
 
 textarea {
-    background-color: rgba(224, 231, 246, 0.819);
+    background-color: rgba(46, 75, 137, 0.819);
     border-radius: .7em;
     height: 65%;
     width: 100%;
     padding: .7em;
-    color: black;
+    color: white;
     resize: none;
 }
 
@@ -295,4 +295,25 @@ footer a {
         margin: .8em 0;
         font-size: 1.2em;
     }
+}
+
+/* animaciones  */
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading {
+    border: 6px solid white;
+    border-radius: 100%;
+    border-top-color: var(--color-background-cajas);
+    border-bottom-color: white;
+    width: 5em;
+    height: 5em;
+    animation: loading 1.5s infinite linear;
 }

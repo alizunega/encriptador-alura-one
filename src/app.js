@@ -43,12 +43,16 @@ function encriptar(inputText) {
 // escucha el evento del click en el boton encriptar
 document.getElementById("encript").addEventListener("click", () => {
   let inputText = document.getElementById("toEncript").value;
+  let divLoading = document.getElementById("loading");
+  divLoading.style.display = "none";
+
   if (validar(inputText)) {
     let encriptado = encriptar(inputText);
     if (encriptado === "") {
       return mostrarNotificacion("No se puede encriptar un texto vacio");
     }
     //muestra la palabra a encriptar durante 5 seg, luego setea el input
+    document.getElementById("encripted").style.display = "block";
     document.getElementById("encripted").innerHTML = encriptado;
   }
 });
