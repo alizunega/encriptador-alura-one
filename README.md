@@ -20,7 +20,8 @@ Requisitos:
 
 > Debe funcionar solo con letras minúsculas
 > No deben ser utilizados letras con acentos ni caracteres especiales
-> Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+> Debe ser posible convertir una palabra para la versión encriptada
+  también devolver una palabra encriptada para su versión original.
 ```
 
 ## Estructura de carpetas :open_file_folder:
@@ -47,7 +48,7 @@ encriptador_alura_ONE
 
 > [!TIP]
 >
-> Acepta mayúsculas y minúsculas  
+> Acepta sólo minúsculas  
 > No acepta simbolos o números  
 > No acepta caracteres especiales  
 > Acepta espacios en blanco
