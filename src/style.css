@@ -132,14 +132,15 @@ button:hover {
 
 
 .icono {
-    width: 30px;
+    width: 3.75em;
     margin: .5em;
 }
 
 .icono:hover {
     cursor: pointer;
-    background-color: #0c2c51;
-    border-radius: 50%;
+    background-color: #18559b87;
+    border-radius: 10%;
+    padding: .4em;
 }
 
 footer {
@@ -181,9 +182,6 @@ footer ul li {
     display: inline;
 }
 
-.icono {
-    width: 60px;
-}
 
 /* Eliminar cualquier margen o padding del <a> */
 footer a {
