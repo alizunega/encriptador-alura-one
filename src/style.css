@@ -132,7 +132,7 @@ button:hover {
 
 
 .icono {
-    width: 3.75em;
+    width: 2em;
     margin: .5em;
 }
 
@@ -158,17 +158,19 @@ footer {
 footer a {
     text-decoration: none;
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .logo-alura-oracle {
-    width: 200px;
+    width: 8em;
     height: auto;
     margin-bottom: .8em;
 }
 
 footer p {
     margin: .8em 0;
-    font-size: .5em;
+    font-size: .4em;
 }
 
 footer ul {
@@ -180,13 +182,6 @@ footer ul {
 
 footer ul li {
     display: inline;
-}
-
-
-/* Eliminar cualquier margen o padding del <a> */
-footer a {
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -227,15 +222,15 @@ footer a {
         height: 12em;
     }
 
-    .logo-alura-oracle {
-        width: 200px;
-        height: auto;
-        margin-bottom: .8em;
-    }
+    /* .logo-alura-oracle {
+            width: 200px;
+            height: auto;
+            margin-bottom: .8em;
+        } */
 
     footer p {
         margin: .5em 0;
-        font-size: 1em;
+        font-size: .9em;
     }
 
     #notification {
@@ -283,15 +278,16 @@ footer a {
         height: 20em;
     }
 
+    /* 
     .logo-alura-oracle {
         width: 300px;
         height: auto;
         margin-bottom: .8em;
-    }
+    } */
 
     footer p {
         margin: .8em 0;
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 
