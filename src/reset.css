@@ -39,6 +39,7 @@ video,
 svg {
     height: auto;
     max-width: 100%;
+    vertical-align: middle;
 }
 
 @media (prefers-reduced-motion: reduce) {
