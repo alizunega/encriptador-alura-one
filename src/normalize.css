@@ -7,12 +7,12 @@
  */
 
 :where(html) {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
-    text-size-adjust: 100%;
-    /* 2 */
+   line-height: 1.15;
+   /* 1 */
+   -webkit-text-size-adjust: 100%;
+   /* 2 */
+   text-size-adjust: 100%;
+   /* 2 */
 }
 
 /* Sections
@@ -24,9 +24,9 @@
    */
 
 :where(h1) {
-    font-size: 2em;
-    margin-block-end: 0.67em;
-    margin-block-start: 0.67em;
+   font-size: 2em;
+   margin-block-end: 0.67em;
+   margin-block-start: 0.67em;
 }
 
 /* Grouping content
@@ -37,8 +37,8 @@
    */
 
 :where(dl, ol, ul) :where(dl, ol, ul) {
-    margin-block-end: 0;
-    margin-block-start: 0;
+   margin-block-end: 0;
+   margin-block-start: 0;
 }
 
 /**
@@ -47,12 +47,12 @@
    */
 
 :where(hr) {
-    box-sizing: content-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    height: 0;
-    /* 1 */
+   box-sizing: content-box;
+   /* 1 */
+   color: inherit;
+   /* 2 */
+   height: 0;
+   /* 1 */
 }
 
 /* Text-level semantics
@@ -63,8 +63,8 @@
    */
 
 :where(abbr[title]) {
-    text-decoration: underline;
-    text-decoration: underline dotted;
+   text-decoration: underline;
+   text-decoration: underline dotted;
 }
 
 /**
@@ -72,7 +72,7 @@
    */
 
 :where(b, strong) {
-    font-weight: bolder;
+   font-weight: bolder;
 }
 
 /**
@@ -81,10 +81,10 @@
    */
 
 :where(code, kbd, pre, samp) {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
+   font-family: monospace, monospace;
+   /* 1 */
+   font-size: 1em;
+   /* 2 */
 }
 
 /**
@@ -92,7 +92,7 @@
    */
 
 :where(small) {
-    font-size: 80%;
+   font-size: 80%;
 }
 
 /* Tabular data
@@ -104,10 +104,10 @@
    */
 
 :where(table) {
-    border-color: currentColor;
-    /* 1 */
-    text-indent: 0;
-    /* 2 */
+   border-color: currentColor;
+   /* 1 */
+   text-indent: 0;
+   /* 2 */
 }
 
 /* Forms
@@ -118,7 +118,7 @@
    */
 
 :where(button, input, select) {
-    margin: 0;
+   margin: 0;
 }
 
 /**
@@ -126,7 +126,7 @@
    */
 
 :where(button) {
-    text-transform: none;
+   text-transform: none;
 }
 
 /**
@@ -134,7 +134,8 @@
    */
 
 :where(button, input:is([type="button" i], [type="reset" i], [type="submit" i])) {
-    -webkit-appearance: button;
+   -webkit-appearance: button;
+   appearance: button;
 }
 
 /**
@@ -142,7 +143,7 @@
    */
 
 :where(progress) {
-    vertical-align: baseline;
+   vertical-align: baseline;
 }
 
 /**
@@ -150,7 +151,7 @@
    */
 
 :where(select) {
-    text-transform: none;
+   text-transform: none;
 }
 
 /**
@@ -158,7 +159,7 @@
    */
 
 :where(textarea) {
-    margin: 0;
+   margin: 0;
 }
 
 /**
@@ -167,10 +168,11 @@
    */
 
 :where(input[type="search" i]) {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
+   -webkit-appearance: textfield;
+   appearance: textfield;
+   /* 1 */
+   outline-offset: -2px;
+   /* 2 */
 }
 
 /**
@@ -179,7 +181,7 @@
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-    height: auto;
+   height: auto;
 }
 
 /**
@@ -187,8 +189,8 @@
    */
 
 ::-webkit-input-placeholder {
-    color: inherit;
-    opacity: 0.54;
+   color: inherit;
+   opacity: 0.54;
 }
 
 /**
@@ -196,7 +198,7 @@
    */
 
 ::-webkit-search-decoration {
-    -webkit-appearance: none;
+   -webkit-appearance: none;
 }
 
 /**
@@ -205,10 +207,10 @@
    */
 
 ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    /* 1 */
-    font: inherit;
-    /* 2 */
+   -webkit-appearance: button;
+   /* 1 */
+   font: inherit;
+   /* 2 */
 }
 
 /**
@@ -216,8 +218,8 @@
    */
 
 :where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+   border-style: none;
+   padding: 0;
 }
 
 /**
@@ -225,7 +227,7 @@
    */
 
 :where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focusring {
-    outline: 1px dotted ButtonText;
+   outline: 1px dotted ButtonText;
 }
 
 /**
@@ -233,7 +235,7 @@
    */
 
 :where(:-moz-ui-invalid) {
-    box-shadow: none;
+   box-shadow: none;
 }
 
 /* Interactive
@@ -244,22 +246,22 @@
    */
 
 :where(dialog) {
-    background-color: white;
-    border: solid;
-    color: black;
-    height: -moz-fit-content;
-    height: fit-content;
-    left: 0;
-    margin: auto;
-    padding: 1em;
-    position: absolute;
-    right: 0;
-    width: -moz-fit-content;
-    width: fit-content;
+   background-color: white;
+   border: solid;
+   color: black;
+   height: -moz-fit-content;
+   height: fit-content;
+   left: 0;
+   margin: auto;
+   padding: 1em;
+   position: absolute;
+   right: 0;
+   width: -moz-fit-content;
+   width: fit-content;
 }
 
 :where(dialog:not([open])) {
-    display: none;
+   display: none;
 }
 
 /*
@@ -267,5 +269,5 @@
    */
 
 :where(summary) {
-    display: list-item;
+   display: list-item;
 }
