@@ -110,6 +110,52 @@ textarea {
     min-width: 100dvw;
 }
 
+#mensajeAyuda {
+    visibility: hidden;
+    background-color: white;
+    opacity: .9;
+    color: black;
+    text-align: center;
+    border-radius: .4em;
+    padding: 1em;
+    position: fixed;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: fit-content;
+}
+
+ul {
+    list-style: none;
+    padding: 2em;
+    text-align: left;
+}
+
+#close {
+    width: 2.5em;
+    display: flex;
+    position: fixed;
+    right: .3em;
+    top: .3em;
+}
+
+.help {
+    display: flex;
+    position: fixed;
+    right: .3em;
+    top: .3em;
+    width: 3em;
+    background-color: var(--color-background-header);
+    opacity: .8;
+    border-radius: .5em;
+    border: 0;
+
+}
+
+.help:hover {
+    background-color: var(--color-buttons);
+}
 
 .buttons {
     display: flex;
@@ -119,7 +165,7 @@ textarea {
     font-weight: 600;
 }
 
-button {
+section>button {
     background-color: var(--color-buttons);
     margin: .4rem;
     padding: .4rem;
@@ -129,11 +175,10 @@ button {
     color: black;
 }
 
-button:hover {
+section>button:hover {
     background-color: var(--color-buttons-hover);
     padding: .7em;
 }
-
 
 
 .icono {

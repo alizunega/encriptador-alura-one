@@ -144,3 +144,23 @@ function mostrarNotificacion(mensaje) {
   }, 3000); // Oculta la notificación después de 3 segundos
 }
 /* NOTIFICACION */
+/* AYUDA */
+function mostrarAyuda() {
+  const help = document.getElementById("mensajeAyuda");
+  help.style.visibility = "visible";
+
+  const cerrar = document.getElementById("close");
+  cerrar.addEventListener("click", () => {
+    help.style.visibility = "hidden";
+  });
+
+  //si no cierra la notificacion, se cerrara sola en 10 seg
+  setTimeout(() => {
+    help.style.visibility = "hidden";
+  }, 10000);
+}
+
+//evento click en boton ayuda
+document.getElementById("help").addEventListener("click", mostrarAyuda);
+
+/* AYUDA */
