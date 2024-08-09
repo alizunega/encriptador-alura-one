@@ -97,13 +97,14 @@ textarea {
 #notification {
     visibility: hidden;
     background-color: var(--color-buttons);
+    opacity: .6;
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: .5em;
-    padding: .8em;
+    padding: .9em;
     position: fixed;
     z-index: 1;
-    bottom: 86%;
+    bottom: 85%;
     left: 50%;
     transform: translateX(-50%);
     min-width: 150px;
@@ -189,7 +190,7 @@ footer ul li {
 }
 
 
-
+/* media  */
 @media (min-width: 768px) {
     body {
         font-size: 1em;
@@ -236,7 +237,7 @@ footer ul li {
         font-size: .9em;
     }
 
-    #notification {
+    /* #notification {
         visibility: hidden;
         background-color: var(--color-buttons);
         color: rgb(0, 0, 0);
@@ -249,7 +250,7 @@ footer ul li {
         left: 50%;
         transform: translateX(-50%);
         min-width: 200px;
-    }
+    } */
 }
 
 @media (min-width: 968px) {
@@ -259,10 +260,12 @@ footer ul li {
 
     main {
         grid-template-columns: 2fr 1fr 2fr 1fr;
+        margin: auto;
+        width: 80%;
     }
 
 
-    #notification {
+    /* #notification {
         visibility: hidden;
         background-color: var(--color-buttons);
         color: rgb(0, 0, 0);
@@ -275,7 +278,7 @@ footer ul li {
         left: 50%;
         transform: translateX(-50%);
         min-width: 200px;
-    }
+    } */
 
     textarea {
         height: 20em;
