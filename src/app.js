@@ -79,15 +79,22 @@ function desencriptar(inputText) {
 
 document.getElementById("decript").addEventListener("click", () => {
   let inputText = document.getElementById("toEncript").value;
+  let textArea = document.getElementById("encripted");
   let divLoading = document.getElementById("loading");
-  divLoading.style.display = "none";
-  console.log(inputText);
+  if (inputText === "") {
+    textArea.style.display = "none";
+    divLoading.style.display = "block";
+    mostrarNotificacion("No hay texto para desencriptar");
+  } else {
+    console.log(inputText);
 
-  if (validar(inputText)) {
-    let desencriptado = desencriptar(inputText);
-    console.log(desencriptado);
-    document.getElementById("encripted").style.display = "block";
-    document.getElementById("encripted").innerHTML = desencriptado;
+    if (validar(inputText)) {
+      let desencriptado = desencriptar(inputText);
+      console.log(desencriptado);
+      divLoading.style.display = "none";
+      document.getElementById("encripted").style.display = "block";
+      document.getElementById("encripted").innerHTML = desencriptado;
+    }
   }
 });
 
