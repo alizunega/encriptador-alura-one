@@ -97,17 +97,17 @@ textarea {
 #notification {
     visibility: hidden;
     background-color: var(--color-buttons);
-    opacity: .6;
+    opacity: .8;
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: .5em;
-    padding: .9em;
+    padding: 1em;
     position: fixed;
     z-index: 1;
-    bottom: 85%;
+    bottom: 65%;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 150px;
+    min-width: 100dvw;
 }
 
 
@@ -131,7 +131,7 @@ button {
 
 button:hover {
     background-color: var(--color-buttons-hover);
-    padding: .4em;
+    padding: .7em;
 }
 
 
@@ -219,7 +219,7 @@ footer ul li {
 
     button {
         margin: .6em .2em;
-        padding: .6;
+        padding: .6em;
     }
 
     textarea {
