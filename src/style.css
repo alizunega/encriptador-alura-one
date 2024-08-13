@@ -6,8 +6,8 @@
     --color-background-cajas: #7b83aecd;
     --color-background-footer: #203754ae;
     --color-background-header: #193a62d8;
-    --color-buttons: #a6fec1;
-    --color-buttons-hover: #8cfaad;
+    --color-buttons: linear-gradient(220.55deg, #6ec467 0%, #39A0FF 100%);
+    --color-buttons-hover: #a7f7bf;
     --color-fonts: #fdfdfd;
     --font-titulo: "Ubuntu", sans-serif;
     --font-texto: "Open Sans", sans-serif;
@@ -96,7 +96,7 @@ textarea {
 
 #notification {
     visibility: hidden;
-    background-color: var(--color-buttons);
+    background: var(--color-buttons);
     opacity: .8;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -166,12 +166,12 @@ ul {
 }
 
 section>button {
-    background-color: var(--color-buttons);
-    margin: .4rem;
-    padding: .4rem;
+    background: var(--color-buttons);
+    margin: .5rem;
+    padding: .6rem;
     border-radius: .5em;
     text-align: center;
-    width: 9em;
+    width: 10rem;
     color: black;
 }
 
@@ -344,6 +344,55 @@ footer ul li {
 
 /* animaciones  */
 @keyframes loading {
+
+    0%,
+    100% {
+        margin-top: 1.5rem;
+        height: .8rem;
+    }
+
+    50% {
+        margin-top: 0px;
+        height: 3.125rem;
+    }
+}
+
+ul.animation-class {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: .8rem;
+}
+
+li.animation-list {
+    background-color: rgba(131, 155, 208, 0.819);
+    width: 1.7rem;
+    height: 1.7rem;
+    animation: loading 1s ease-in-out infinite;
+}
+
+li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+li:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+li:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+li:nth-child(4) {
+    animation-delay: -0.6s;
+}
+
+li:nth-child(5) {
+    animation-delay: -0.8s;
+}
+
+/* @keyframes loading {
     0% {
         transform: rotate(0deg);
     }
@@ -361,4 +410,4 @@ footer ul li {
     width: 5em;
     height: 5em;
     animation: loading 1.5s infinite linear;
-}
+} */

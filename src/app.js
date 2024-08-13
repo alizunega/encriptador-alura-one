@@ -1,7 +1,7 @@
 /* VALIDACIONES */
 function validar(inputText) {
   //expresion regular para minusculas y espacios
-  const validos = /^[a-z\s]*$/;
+  const validos = /^[a-z\sñ]*$/;
   if (!validos.test(inputText)) {
     mostrarNotificacion("Solo se permiten letras minusculas y espacios");
     return false;
@@ -49,7 +49,7 @@ document.getElementById("encript").addEventListener("click", () => {
   if (validar(inputText)) {
     let encriptado = encriptar(inputText);
     if (encriptado === "") {
-      return mostrarNotificacion("No se puede encriptar un texto vacio");
+      return mostrarNotificacion("No se puede encriptar un texto vacío");
     }
     document.getElementById("encripted").style.display = "block";
     document.getElementById("encripted").innerHTML = encriptado;
@@ -86,11 +86,8 @@ document.getElementById("decript").addEventListener("click", () => {
     divLoading.style.display = "block";
     mostrarNotificacion("No hay texto para desencriptar");
   } else {
-    console.log(inputText);
-
     if (validar(inputText)) {
       let desencriptado = desencriptar(inputText);
-      console.log(desencriptado);
       divLoading.style.display = "none";
       document.getElementById("encripted").style.display = "block";
       document.getElementById("encripted").innerHTML = desencriptado;
